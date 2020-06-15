@@ -3,10 +3,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.scss";
 
 // pages
-import Home from "./pages/Home/Home";
-import Bikes from "./pages/Bikes/Bikes";
-import Bike from "./pages/Bike/Bike";
-import Error from "./pages/Error/Error";
+import Home from "../pages/Home/Home";
+import Bikes from "../pages/Bikes/Bikes";
+import Bike from "../pages/Bike/Bike";
+import Error from "../pages/Error/Error";
 
 // bike data object
 import bikes from "../data/bikes";

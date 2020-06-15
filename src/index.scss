@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --text-primary-light: #ffffff;
+  --text-primary-dark: #222222;
+  --text-secondary: #999999;
+
+  // --mobile-small: 320px;
+  // --mobile-medium: 375px;
+  // --mobile-large: 425px;
+  // --tablet: 768px;
+  // --laptop: 1024px;
+  // --laptop-large: 1440px;
+  // --desktop: 2560px;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TradeGothic LT Bold", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--text-primary-dark);
+}
