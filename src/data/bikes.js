@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 // SB165 images
 import SB165_COMPLETE_BLACK from "../images/bikes/SB165/2020_YetiCycles_SB165_Complete_Black.jpg";
 import SB165_COMPLETE_TURQ from "../images/bikes/SB165/2020_YetiCycles_SB165_Complete_Turq.jpg";
@@ -23,7 +25,7 @@ import SB100_COMPLETE_TURQ from "../images/bikes/SB100/2020_YetiCycles_SB100_Tur
 
 const bikes = [
   {
-    id: 1,
+    id: uuidv4(),
     name: "SB165",
     summary:
       "Master of the gnarniverse. Bold claim. The SB165 was created to get after whatever you’re getting after. The slackest sled in our lineup. With kinematics tuned for a coil-shock. At home outside the tape and trusted on the lines where mistakes can’t happen. The SB165 already has you covered.",
@@ -36,19 +38,21 @@ const bikes = [
     },
     colors: [
       {
-        id: 1,
+        id: uuidv4(),
         name: "Black",
         path: SB165_COMPLETE_BLACK,
+        hexCode: "#222222",
       },
       {
-        id: 2,
+        id: uuidv4(),
         name: "Turquoise",
         path: SB165_COMPLETE_TURQ,
+        hexCode: "#009fad",
       },
     ],
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "SB150",
     summary:
       "Race bred.” it’s not just a slogan printed on the SB150 top tube. We’ve been pinning on numbers and pinning the throttle since 1985. So when choices had to be made on the SB150, every single one was made in the name of unbridled speed. The ultimate example of breeding a bike to beat the clock.",
@@ -61,24 +65,27 @@ const bikes = [
     },
     colors: [
       {
-        id: 1,
+        id: uuidv4(),
         name: "Anthracite",
         path: SB150_COMPLETE_ANTHRACITE,
+        hexCode: "#666666",
       },
       {
-        id: 2,
+        id: uuidv4(),
         name: "Turquoise",
         path: SB150_COMPLETE_TURQ,
+        hexCode: "#009fad",
       },
       {
-        id: 3,
+        id: uuidv4(),
         name: "Verde",
         path: SB150_COMPLETE_VERDE,
+        hexCode: "#97d700",
       },
     ],
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: "SB140",
     summary:
       "Some say the SB140 never met a dirt it didn’t like. We agree in spades. What’s your pleasure? Drag a bar. Make an edit. Stay out after dark. Try it. Land it. Or just stay at it. Happy to pedal. Greedy for more.The mayor of jibtown, proudly wearing the rip crown. The SB140. Down to fun.",
@@ -91,24 +98,27 @@ const bikes = [
     },
     colors: [
       {
-        id: 1,
+        id: uuidv4(),
         name: "Smoke",
         path: SB140_COMPLETE_SMOKE,
+        hexCode: "#666666",
       },
       {
-        id: 2,
+        id: uuidv4(),
         name: "Turquoise",
         path: SB140_COMPLETE_TURQ,
+        hexCode: "#009fad",
       },
       {
-        id: 3,
+        id: uuidv4(),
         name: "Inferno",
         path: SB140_COMPLETE_INFERO,
+        hexCode: "#fa8614",
       },
     ],
   },
   {
-    id: 4,
+    id: uuidv4(),
     name: "SB130",
     summary:
       "The rebel yell of the middle child. Fed a steady diet of super-tech climbs. The SB130 was built to crush the biggest terrain. No trail “too” anything. Point it up or down. Enter a last-minute enduro just for the eff of it. We say no one bike can rule all. But the SB130? One bike that rules.",
@@ -121,24 +131,27 @@ const bikes = [
     },
     colors: [
       {
-        id: 1,
+        id: uuidv4(),
         name: "Storm",
         path: SB130_COMPLETE_STORM,
+        hexCode: "#075b81",
       },
       {
-        id: 2,
+        id: uuidv4(),
         name: "Anthracite",
         path: SB130_COMPLETE_ANTHRACITE,
+        hexCode: "#666666",
       },
       {
-        id: 3,
+        id: uuidv4(),
         name: "Turquoise",
         path: SB130_COMPLETE_TURQ,
+        hexCode: "#009fad",
       },
     ],
   },
   {
-    id: 5,
+    id: uuidv4(),
     name: "SB100",
     summary:
       "Last we checked, “xc-style” racing on a mountain bike doesn’t stop once you crest the climb. Crushing souls on the descent is more than half the fun. And a hell of a lot more than half the point. For racers who want to fly down as much as soar up, the SB100 is the bike we’ve always wanted to make.",
@@ -151,14 +164,16 @@ const bikes = [
     },
     colors: [
       {
-        id: 1,
+        id: uuidv4(),
         name: "Turquoise",
         path: SB100_COMPLETE_TURQ,
+        hexCode: "#009fad",
       },
       {
-        id: 2,
+        id: uuidv4(),
         name: "Black",
         path: SB100_COMPLETE_BLACK,
+        hexCode: "#222222",
       },
     ],
   },
