@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import gsap from "gsap";
 
 import "./BikeTile.scss";
 
@@ -9,7 +10,17 @@ class BikeTile extends Component {
     super(props);
     this.state = {
       activeId: this.props.bike.colors[0].id,
+      inProp: false,
     };
+    this.imageRef = React.createRef();
+  }
+
+  componentDidMount() {
+    gsap.from(this.imageRef, {
+      autoAlpha: 0,
+      duration: 0.8,
+      ease: "power4.in",
+    });
   }
 
   handleClick = (e) => {
@@ -31,7 +42,7 @@ class BikeTile extends Component {
     const { colors } = this.props.bike;
     const { activeId } = this.state;
     const getClassNames = (color) => {
-      return `biketile-color-btn ${color.id === activeId ? "active" : ""}`;
+      return `biketile-colordot ${color.id === activeId ? "active" : ""}`;
     };
 
     return colors.map((color) => (
@@ -52,13 +63,14 @@ class BikeTile extends Component {
       <div className="biketile">
         <Link className="biketile-link" to={this.getLinkPath()}>
           <img
+            ref={(el) => (this.imageRef = el)}
             src={this.getImageSrc()}
             alt={bike.name}
             className="biketile-image"
           />
         </Link>
         <div className="biketile-info">
-          <h3 className="biketitle-name">{bike.name}</h3>
+          <h3 className="biketile-name">{bike.name}</h3>
           <ul className="biketile-list">
             <li className="biketile-item">
               <span>{bike.info.rearTravel}</span>
@@ -73,9 +85,10 @@ class BikeTile extends Component {
               <span>Designed For</span>
             </li>
           </ul>
+          <div className="biketile-colordot-group">
+            {this.colorButtonsJSX()}
+          </div>
         </div>
-
-        {this.colorButtonsJSX()}
       </div>
     );
   }
