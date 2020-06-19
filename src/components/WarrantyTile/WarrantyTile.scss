@@ -1,0 +1,12 @@
+.WarrantyTile {
+  padding: 3.5rem;
+  background-color: black;
+
+  @media (min-width: 1024px) {
+    padding: 5.5rem;
+  }
+
+  &-image {
+    max-width: 100%;
+  }
+}

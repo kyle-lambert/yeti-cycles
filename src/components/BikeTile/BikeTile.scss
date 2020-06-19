@@ -1,56 +1,4 @@
-// .BikeTile {
-//   &-link {
-//     display: block;
-//   }
-
-//   &-img {
-//     position: relative;
-//     max-width: 100%;
-//     display: block;
-//   }
-
-//   &-info {
-//     position: relative;
-//     padding: 0 10% 10% 10%;
-//     // margin-top: -14px;
-
-//     &-heading {
-//       font-size: 2.6rem;
-//       letter-spacing: 14px;
-//     }
-
-//     &-list {
-//       margin-top: 1.4rem;
-//       list-style: none;
-//     }
-
-//     &-item {
-//       margin-bottom: 1.2rem;
-
-//       &:last-child {
-//         margin-bottom: 0;
-//       }
-//     }
-
-//     &-span {
-//       display: block;
-
-//       &:first-child {
-//         font-size: 1.3rem;
-//         margin-bottom: 0.2rem;
-//         letter-spacing: 2px;
-//       }
-
-//       &:last-child {
-//         font-size: 0.9rem;
-//         color: var(--text-secondary);
-//         letter-spacing: 1px;
-//       }
-//     }
-//   }
-// }
-
-.biketile {
+.BikeTile {
   &-link {
     display: block;
     background-color: white;
@@ -63,7 +11,6 @@
     min-height: 100%;
     object-fit: cover;
     display: block;
-    visibility: hidden;
   }
 
   &-info {
@@ -78,7 +25,7 @@
   &-name {
     position: absolute;
     top: 0;
-    left: 4rem;
+    left: 3rem;
     font-size: 2.6rem;
     letter-spacing: 14px;
     transform: translateY(-50%);
@@ -86,12 +33,17 @@
     @media (min-width: 1024px) {
       font-size: 3.2rem;
       top: 0;
+      left: 4rem;
     }
   }
 
   &-list {
     list-style: none;
-    margin-left: 4rem;
+    margin-left: 3rem;
+
+    @media (min-width: 1024px) {
+      margin-left: 4rem;
+    }
   }
 
   &-item {
@@ -142,7 +94,7 @@
   &-colordot-group {
     position: absolute;
     top: 50%;
-    right: 3rem;
+    right: 2rem;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -151,22 +103,26 @@
       flex-direction: row;
       top: 0;
     }
+
+    @media (min-width: 1024px) {
+      right: 3rem;
+    }
   }
 
   &-colordot {
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     border: none;
     outline: none;
     cursor: pointer;
-    margin: 0.8rem;
+    margin: 0.5rem;
     border-radius: 50%;
 
     @media (min-width: 1024px) {
-      margin: 1rem;
-      width: 30px;
-      height: 30px;
+      margin: 0.6rem;
+      width: 26px;
+      height: 26px;
     }
 
     &:disabled {

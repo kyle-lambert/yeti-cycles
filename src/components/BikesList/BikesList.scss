@@ -1,16 +1,27 @@
-.BikesList {
+.BikeList {
   background-color: rgba(0, 0, 0, 0.04);
+  padding: 6.8rem 0;
 
   &-inner {
     max-width: var(--container-max);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
 
   @media (min-width: 768px) {
     &-inner {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      padding: 0 3.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &-inner {
       gap: 55px;
+      padding: 0 5.5rem;
     }
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import BikesList from "../../components/BikesList/BikesList";
+import Warranty from "../../components/WarrantyTile/WarrantyTile";
 
 import "./Bikes.scss";
 
@@ -9,6 +10,7 @@ class Bikes extends Component {
     return (
       <div className="Bikes">
         <BikesList />
+        {/* <Warranty /> */}
       </div>
     );
   }
