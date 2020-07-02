@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
-import { fadeIn } from "../../animations";
 import "./BikeTile.scss";
 
 class BikeTile extends Component {
@@ -11,12 +10,6 @@ class BikeTile extends Component {
     this.state = {
       activeId: this.props.bike.colors[0].id,
     };
-    this.bikeTile = null;
-  }
-
-  componentDidMount() {
-    const introAnimation = fadeIn(this.bikeTile);
-    introAnimation.play();
   }
 
   handleClick = (e) => {
@@ -56,7 +49,7 @@ class BikeTile extends Component {
   render() {
     const { bike } = this.props;
     return (
-      <div className="BikeTile" ref={(el) => (this.bikeTile = el)}>
+      <div className="BikeTile">
         <Link className="BikeTile-link" to={this.getLinkPath()}>
           <img
             src={this.getImageSrc()}

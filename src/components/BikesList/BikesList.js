@@ -7,11 +7,25 @@ import WarrantyTile from "../WarrantyTile/WarrantyTile";
 import bikes from "../../data/bikes";
 import "./BikesList.scss";
 
+import { fadeIn } from "../../animations.js";
+
 class BikesList extends Component {
+  constructor(props) {
+    super(props);
+    this.innerRef = null;
+  }
+
+  componentDidMount() {
+    const introAnimation = fadeIn(this.innerRef);
+    setTimeout((cur) => {
+      introAnimation.play();
+    }, 5000);
+  }
+
   render() {
     return (
       <section className="BikeList">
-        <div className="BikeList-inner">
+        <div className="BikeList-inner" ref={(el) => (this.innerRef = el)}>
           {bikes.map((bike) => (
             <BikeTile key={uuidv4()} bike={bike} />
           ))}
