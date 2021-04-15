@@ -17,9 +17,7 @@ class BikesList extends Component {
 
   componentDidMount() {
     const introAnimation = fadeIn(this.innerRef);
-    setTimeout((cur) => {
-      introAnimation.play();
-    }, 5000);
+    introAnimation.play();
   }
 
   render() {
